@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ApplicationWelocomeString" xml:space="preserve">
+    <value>Welcome to Use Suspicious Object Exporter !!</value>
+  </data>
+  <data name="ArrowIcon01" xml:space="preserve">
+    <value>==&gt;</value>
+  </data>
+  <data name="ArrowIcon02" xml:space="preserve">
+    <value>&lt;==</value>
+  </data>
+  <data name="ColonIcon" xml:space="preserve">
+    <value>:</value>
+  </data>
+  <data name="DirectorIcon01" xml:space="preserve">
+    <value>&gt;</value>
+  </data>
+  <data name="DivideIcon01" xml:space="preserve">
+    <value>---</value>
+  </data>
+  <data name="DivideIcon02" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="ExceptionTitleString" xml:space="preserve">
+    <value>[FAILED] Exception Message : </value>
+  </data>
+  <data name="ExitApplicationString" xml:space="preserve">
+    <value>Please key in "Enter" to exit</value>
+  </data>
+  <data name="HelpInfoString" xml:space="preserve">
+    <value>USAGE :
+    SuspiciousObjectExporter.exe [/s [Start ID]] [/e [End ID]] [/f [y|n]] [/d]
+where
+    Start ID    The first ID for querying the suspicious object list
+    End ID      The latest ID for querying the suspicious object list
+
+    Options :
+        /s      Specifies the first ID of the suspicious object to be queried
+        /e      Specifies the latest ID of the suspicious object to be queried
+        /f      Enables the action which the console freeze after executed or not for PowerShell or Windows scheduler
+        /d      Enable debug mode
+
+Example :
+    &gt; SuspiciousObjectExporter.exe /s 0 /e 0         ... Export all of the suspicious object and freeze the console windows after executed
+    &gt; SuspiciousObjectExporter.exe /s 1 /e 2         ... Export the suspicious object from ID NO.1 to ID NO.2
+    &gt; SuspiciousObjectExporter.exe /s 0 /e 0 /f y    ... Export all of the suspicious object and freeze the console windows after executed
+    &gt; SuspiciousObjectExporter.exe /s 0 /e 0 /f n    ... Export all of the suspicious object and don't freeze the console windows after executed
+    &gt; SuspiciousObjectExporter.exe /f n              ... Export all of the suspicious object and don't freeze the console windows after executed
+    &gt; SuspiciousObjectExporter.exe /d                ... Enable debug mode</value>
+  </data>
+  <data name="IgnoreString" xml:space="preserve">
+    <value>[IGNORE]</value>
+  </data>
+  <data name="illeaglInfoString01" xml:space="preserve">
+    <value>The count of arguments is odd. It is illeage input.</value>
+  </data>
+  <data name="illeaglInfoString02" xml:space="preserve">
+    <value>The count of arguments is bigger than 6.  It is illeage input.</value>
+  </data>
+  <data name="illeaglInfoString03" xml:space="preserve">
+    <value>There are some illeage arguments.</value>
+  </data>
+  <data name="illeaglInfoString04" xml:space="preserve">
+    <value>There is illeage argument</value>
+  </data>
+  <data name="illeaglInfoString05" xml:space="preserve">
+    <value>Start ID and End ID are required</value>
+  </data>
+  <data name="illeaglInfoString06" xml:space="preserve">
+    <value>Start ID is must smaller than End ID</value>
+  </data>
+  <data name="ImportFinishString" xml:space="preserve">
+    <value>Exporting is finished !!</value>
+  </data>
+  <data name="ImportStartString" xml:space="preserve">
+    <value>Start to Export </value>
+  </data>
+  <data name="ImportSuccessfully" xml:space="preserve">
+    <value>Export TMCM Suspicious Object List Successfully</value>
+  </data>
+  <data name="InputInfoString01" xml:space="preserve">
+    <value>Please Input [start ID] for querying the suspicious object list : default = 0</value>
+  </data>
+  <data name="InputInfoString02" xml:space="preserve">
+    <value>Please Input [end ID] for querying the suspicious object list : default = 0</value>
+  </data>
+  <data name="NumericWarningString" xml:space="preserve">
+    <value>Must be numeric !!</value>
+  </data>
+  <data name="SORangeInfoString01" xml:space="preserve">
+    <value>The ID of Suspicious Object is between</value>
+  </data>
+  <data name="SORangeInfoString02" xml:space="preserve">
+    <value>And</value>
+  </data>
+</root>

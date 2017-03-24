@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuspiciousObjectExporter", "SuspiciousObjectExporter\SuspiciousObjectExporter.csproj", "{75350A88-E188-4BEB-9111-1F53CBC9F812}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncryptDecryptUtility.NET", "EncryptDecryptUtility.NET\EncryptDecryptUtility.NET.csproj", "{581C8A3D-ADCA-4E60-8028-6DD8E29A6BEB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{75350A88-E188-4BEB-9111-1F53CBC9F812}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75350A88-E188-4BEB-9111-1F53CBC9F812}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75350A88-E188-4BEB-9111-1F53CBC9F812}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75350A88-E188-4BEB-9111-1F53CBC9F812}.Release|Any CPU.Build.0 = Release|Any CPU
+		{581C8A3D-ADCA-4E60-8028-6DD8E29A6BEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{581C8A3D-ADCA-4E60-8028-6DD8E29A6BEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{581C8A3D-ADCA-4E60-8028-6DD8E29A6BEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{581C8A3D-ADCA-4E60-8028-6DD8E29A6BEB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

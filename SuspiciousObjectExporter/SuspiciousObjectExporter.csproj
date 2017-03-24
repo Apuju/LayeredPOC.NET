@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{75350A88-E188-4BEB-9111-1F53CBC9F812}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SuspiciousObjectExporter</RootNamespace>
+    <AssemblyName>SuspiciousObjectExporter</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>SuspiciousObjectExporter.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\JSONNET\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bussiness\ConfigAgent.cs" />
+    <Compile Include="Bussiness\SuspiciousObjectAgent.cs" />
+    <Compile Include="Bussiness\TemplateAgent.cs" />
+    <Compile Include="Data\Config.cs" />
+    <Compile Include="Data\SuspiciousObject.cs" />
+    <Compile Include="Frameworks\ConfigHelper.cs" />
+    <Compile Include="Frameworks\DBHelper.cs" />
+    <Compile Include="Frameworks\DirectoryWriter.cs" />
+    <Compile Include="Frameworks\LogWriter.cs" />
+    <Compile Include="Frameworks\RegHelper.cs" />
+    <Compile Include="Frameworks\StreamWriter.cs" />
+    <Compile Include="Frameworks\TemplateHelper.cs" />
+    <Compile Include="LocalResource\Exporter.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Exporter.resx</DependentUpon>
+    </Compile>
+    <Compile Include="LocalResource\SuspiciousObjectExporterConsole.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SuspiciousObjectExporterConsole.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Exporter.cs" />
+    <Compile Include="Models\IgnoreRuleVerifier.cs" />
+    <Compile Include="Models\Logger.cs" />
+    <Compile Include="Models\TrimRuleVerifier.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\ConfigurationService.cs" />
+    <Compile Include="Service\StreamExportService.cs" />
+    <Compile Include="Service\SuspiciousObjectService.cs" />
+    <Compile Include="ShareTypes\ConfigDataEntity.cs" />
+    <Compile Include="ShareTypes\IgnoreCharacterDataEntity.cs" />
+    <Compile Include="ShareTypes\LogDataEntity.cs" />
+    <Compile Include="ShareTypes\ReplaceCharacterDataEntity.cs" />
+    <Compile Include="ShareTypes\SuspiciousObjectDataEntiry.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="LocalResource\Exporter.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Exporter.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResource\SuspiciousObjectExporterConsole.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SuspiciousObjectExporterConsole.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="App_Data\Run.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="App_Data\Run.ps1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\ExportCPL.xslt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\SampleData.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\ExportSTIX.xslt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EncryptDecryptUtility.NET\EncryptDecryptUtility.NET.csproj">
+      <Project>{581c8a3d-adca-4e60-8028-6dd8e29a6beb}</Project>
+      <Name>EncryptDecryptUtility.NET</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>XCOPY  "$(TargetPath)" "$(SolutionDir)..\installshield\PrePack\win32\" /D/Y/I
+XCOPY  "$(TargetDir)$(TargetName)$(TargetExt).config"    "$(SolutionDir)..\installshield\PrePack\win32\" /D/Y/I
+XCOPY  "$(TargetDir)App_Data"    "$(SolutionDir)..\installshield\PrePack\win32\$(TargetName)\Lib\" /D/Y/I
+</PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,1 @@
+"C:\Program Files (x86)\Trend Micro\Control Manager\SuspiciousObjectExporter.exe" /f n
