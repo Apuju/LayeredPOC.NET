@@ -6,18 +6,18 @@ namespace SuspiciousObjectExporter.ShareTypes
 {
     public class ConfigDataEntity
     {
-        #region TMCM Server Settings
-        private String m_tmcmHomeDirectory = String.Empty;
+        #region Server Settings
+        private String m_HomeDirectory = String.Empty;
         private String m_cplFileURL = String.Empty;
-        public String TMCMRootDirectory
+        public String RootDirectory
         {
             get
             {
-                return m_tmcmHomeDirectory;
+                return m_HomeDirectory;
             }
             set
             {
-                m_tmcmHomeDirectory = value;
+                m_HomeDirectory = value;
             }
         }
         public String CPLFileURL

@@ -241,7 +241,7 @@ namespace SuspiciousObjectExporter.LocalResource {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Export TMCM Suspicious Object List Successfully.
+        ///   Looks up a localized string similar to Export Suspicious Object List Successfully.
         /// </summary>
         internal static string ImportSuccessfully {
             get {

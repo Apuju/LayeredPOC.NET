@@ -112,10 +112,10 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ApplicationWelocomeString" xml:space="preserve">
     <value>Welcome to Use Suspicious Object Exporter !!</value>
@@ -193,7 +193,7 @@ Example :
     <value>Start to Export </value>
   </data>
   <data name="ImportSuccessfully" xml:space="preserve">
-    <value>Export TMCM Suspicious Object List Successfully</value>
+    <value>Export Suspicious Object List Successfully</value>
   </data>
   <data name="InputInfoString01" xml:space="preserve">
     <value>Please Input [start ID] for querying the suspicious object list : default = 0</value>

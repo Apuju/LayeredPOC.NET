@@ -79,11 +79,11 @@ namespace SuspiciousObjectExporter.LocalResource {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TMCM_sandbox_feedback_blacklists.
+        ///   Looks up a localized string similar to sandbox_feedback_blacklists.
         /// </summary>
-        internal static string TMCM_FeedbackString {
+        internal static string FeedbackString {
             get {
-                return ResourceManager.GetString("TMCM_FeedbackString", resourceCulture);
+                return ResourceManager.GetString("FeedbackString", resourceCulture);
             }
         }
     }

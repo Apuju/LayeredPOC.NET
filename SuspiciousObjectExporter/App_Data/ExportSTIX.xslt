@@ -17,17 +17,17 @@
     <xsl:attribute name="xsi:schemaLocation">http://stix.mitre.org/stix-1 ../stix_core.xsd http://stix.mitre.org/Indicator-2 ../indicator.xsd http://stix.mitre.org/default_vocabularies-1 ../stix_default_vocabularies.xsd http://cybox.mitre.org/objects#FileObject-2 ../cybox/objects/File_Object.xsd http://cybox.mitre.org/default_vocabularies-2 ../cybox/cybox_default_vocabularies.xsd</xsl:attribute>
   </xsl:attribute-set>
   <xsl:template match="SuspiciousObjectList">
-    <xsl:param name="tmcmGuid" select="SuspiciousObject/@SYS_SystemID_Guid"></xsl:param>
+    <xsl:param name="guid" select="SuspiciousObject/@SYS_SystemID_Guid"></xsl:param>
     <xsl:element name="stix:STIX_Package" use-attribute-sets="namespace-set">
       <xsl:attribute name="id">
-        <xsl:value-of select="concat('TMCM:STIXPackage-',$tmcmGuid)"/>
+        <xsl:value-of select="concat('STIXPackage-',$guid)"/>
       </xsl:attribute>
       <xsl:attribute name="version">
         <xsl:text>1.0.1</xsl:text>
       </xsl:attribute>
       <xsl:element name="stix:STIX_Header">
         <xsl:element name="stix:Title">
-          <xsl:text>TMCM Watchlist that contains Suspicious Objects.</xsl:text>
+          <xsl:text>Watchlist that contains Suspicious Objects</xsl:text>
         </xsl:element>
         <xsl:element name="stix:Package_Intent">
           <xsl:attribute name="xsi:type">
@@ -47,7 +47,7 @@
         <xsl:text>indicator:IndicatorType</xsl:text>
       </xsl:attribute>
       <xsl:attribute name="id">
-        <xsl:value-of select="concat('TMCM:Observable',@MD5Key)"/>
+        <xsl:value-of select="concat('Observable',@MD5Key)"/>
       </xsl:attribute>
       <xsl:choose>
         <xsl:when test="@Type='0'">
@@ -58,11 +58,11 @@
             <xsl:text>IP Watchlist</xsl:text>
           </xsl:element>
           <xsl:element name="indicator:Description">
-            <xsl:text>TMCM Blacklist - IP Address Indicator for this watchlist.</xsl:text>
+            <xsl:text>Blacklist - IP Address Indicator for this watchlist.</xsl:text>
           </xsl:element>
           <xsl:element name="indicator:Observable">
             <xsl:attribute name="id">
-              <xsl:value-of select="concat('TMCM:Observable',@MD5Key)"/>
+              <xsl:value-of select="concat('Observable',@MD5Key)"/>
             </xsl:attribute>
             <xsl:element name="cybox:Object">
               <xsl:element name="cybox:Properties">
@@ -93,11 +93,11 @@
             <xsl:text>URL Watchlist</xsl:text>
           </xsl:element>
           <xsl:element name="indicator:Description">
-            <xsl:text>TMCM Blacklist - URL Indicator for this watchlist.</xsl:text>
+            <xsl:text>Blacklist - URL Indicator for this watchlist.</xsl:text>
           </xsl:element>
           <xsl:element name="indicator:Observable">
             <xsl:attribute name="id">
-              <xsl:value-of select="concat('TMCM:Observable',@MD5Key)"/>
+              <xsl:value-of select="concat('Observable',@MD5Key)"/>
             </xsl:attribute>
             <xsl:element name="cybox:Object">
               <xsl:element name="cybox:Properties">
@@ -125,11 +125,11 @@
             <xsl:text>File Hash Watchlist</xsl:text>
           </xsl:element>
           <xsl:element name="indicator:Description">
-            <xsl:text>TMCM Blacklist - Indicator that contains malicious file hashes.</xsl:text>
+            <xsl:text>Blacklist - Indicator that contains malicious file hashes.</xsl:text>
           </xsl:element>
           <xsl:element name="indicator:Observable">
             <xsl:attribute name="id">
-              <xsl:value-of select="concat('TMCM:Observable',@MD5Key)"/>
+              <xsl:value-of select="concat('Observable',@MD5Key)"/>
             </xsl:attribute>
             <xsl:element name="cybox:Object">
               <xsl:element name="cybox:Properties">
@@ -167,11 +167,11 @@
             <xsl:text>Domain Watchlist</xsl:text>
           </xsl:element>
           <xsl:element name="indicator:Description">
-            <xsl:text>TMCM Blacklist - Domain Indicator for this watchlist.</xsl:text>
+            <xsl:text>Blacklist - Domain Indicator for this watchlist.</xsl:text>
           </xsl:element>
           <xsl:element name="indicator:Observable">
             <xsl:attribute name="id">
-              <xsl:value-of select="concat('TMCM:Observable',@MD5Key)"/>
+              <xsl:value-of select="concat('Observable',@MD5Key)"/>
             </xsl:attribute>
             <xsl:element name="cybox:Object">
               <xsl:element name="cybox:Properties">

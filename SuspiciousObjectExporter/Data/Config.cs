@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.IO;
 using System.Xml.XPath;
-using TrendMicro.TMCM.Utilities.WebUtilities;
+using EncryptDecryptUtility.NET;
 using SuspiciousObjectExporter.Frameworks;
 using SuspiciousObjectExporter.ShareTypes;
 
@@ -14,10 +14,10 @@ namespace SuspiciousObjectExporter.Data
         private Boolean m_disposed = false;
         private ConfigDataEntity m_configDataEntity = new ConfigDataEntity();
         private ConfigHelper m_config = new ConfigHelper();
-        private const String m_regPath = @"SOFTWARE\TrendMicro\TVCS";
-        private const String m_tmcmHomeDirectoryRegName = "HomeDirectory";
-        private const String m_tmcmSqlServerRegName = "SQLServer";
-        private const String m_tmcmDbNameRegString = "DBName";
+        private const String m_regPath = @"SOFTWARE\Custom\TVCS";
+        private const String m_HomeDirectoryRegName = "HomeDirectory";
+        private const String m_SqlServerRegName = "SQLServer";
+        private const String m_DbNameRegString = "DBName";
         private const String m_downloadRootFloderPathString = "outputRootFloderPath";
         private const String m_downloadFloderNameString = "outputFloderName";
         private const String m_outputFileNameString = "outputFile";
@@ -35,14 +35,14 @@ namespace SuspiciousObjectExporter.Data
         private const String m_downlaodFloderDefaultName = "SOList";
         private const String m_outputFileDefaultName = "SOList.txt";
         private const String m_stylesheetFileDefaultName = "template.xsl";
-        private const String m_tmcmDatasourceSettingFile = "DataSource.xml";
+        private const String m_DatasourceSettingFile = "DataSource.xml";
         private const String m_defaultSampleBatchRunFileString = "defaultSampleBatchRunFile";
         private const String m_defaultSamplePowerShellRunFileString = "defaultSamplePowerShellRunFile";
         private const string m_templateFloderName = "templateFloderName";
         private const String m_templateFloderDefaultName = "Template";
 
-        #region TMCM Server Information
-        internal ConfigDataEntity GetTMCMServerInfo()
+        #region Server Information
+        internal ConfigDataEntity GetServerInfo()
         {
             String regPath = m_regPath;
             using (RegHelper reg = new RegHelper())
@@ -50,7 +50,7 @@ namespace SuspiciousObjectExporter.Data
                 try
                 {
                     reg.OpenRegReader(regPath);
-                    m_configDataEntity.TMCMRootDirectory = reg.QueryRegValueByName(m_tmcmHomeDirectoryRegName);
+                    m_configDataEntity.RootDirectory = reg.QueryRegValueByName(m_HomeDirectoryRegName);
                 }
                 catch (Exception ex)
                 {
@@ -64,9 +64,9 @@ namespace SuspiciousObjectExporter.Data
         #region  SQL Server Information
         internal ConfigDataEntity GetSQLServerInfo()
         {
-            if (String.IsNullOrEmpty(m_configDataEntity.TMCMRootDirectory))
+            if (String.IsNullOrEmpty(m_configDataEntity.RootDirectory))
             {
-                GetTMCMServerInfo();
+                GetServerInfo();
             }
 
             String regPath = m_regPath;
@@ -75,8 +75,8 @@ namespace SuspiciousObjectExporter.Data
                 try
                 {
                     reg.OpenRegReader(regPath);
-                    m_configDataEntity.SQLServer = reg.QueryRegValueByName(m_tmcmSqlServerRegName);
-                    m_configDataEntity.DBname = reg.QueryRegValueByName(m_tmcmDbNameRegString);
+                    m_configDataEntity.SQLServer = reg.QueryRegValueByName(m_SqlServerRegName);
+                    m_configDataEntity.DBname = reg.QueryRegValueByName(m_DbNameRegString);
                 }
                 catch (Exception ex)
                 {
@@ -84,7 +84,7 @@ namespace SuspiciousObjectExporter.Data
                 }
             }
 
-            using (StreamReader dataSourceReader = new StreamReader(new FileStream(Path.Combine(m_configDataEntity.TMCMRootDirectory, m_tmcmDatasourceSettingFile), FileMode.Open, FileAccess.Read, FileShare.ReadWrite)))
+            using (StreamReader dataSourceReader = new StreamReader(new FileStream(Path.Combine(m_configDataEntity.RootDirectory, m_DatasourceSettingFile), FileMode.Open, FileAccess.Read, FileShare.ReadWrite)))
             {
                 try
                 {
@@ -111,14 +111,14 @@ namespace SuspiciousObjectExporter.Data
         internal ConfigDataEntity GetExportSettings()
         {
 #if DEBUG
-            m_configDataEntity.TMCMRootDirectory = @"C:\TMCM";
+            m_configDataEntity.RootDirectory = @"C:\SuspiciousObjectExporter";
 #endif
 
-            if (String.IsNullOrEmpty(m_configDataEntity.TMCMRootDirectory))
+            if (String.IsNullOrEmpty(m_configDataEntity.RootDirectory))
             {
                 try
                 {
-                    GetTMCMServerInfo();
+                    GetServerInfo();
                 }
                 catch (Exception ex)
                 {
@@ -132,7 +132,7 @@ namespace SuspiciousObjectExporter.Data
                 String downloadRootFloderPath = m_config.GetAppSettingByName(m_downloadRootFloderPathString);
                 if (String.IsNullOrEmpty(downloadRootFloderPath))
                 {
-                    downloadRootFloderPath = m_configDataEntity.TMCMRootDirectory;
+                    downloadRootFloderPath = m_configDataEntity.RootDirectory;
                 }
                 m_configDataEntity.DownloadRootFloderPath = downloadRootFloderPath;
 
